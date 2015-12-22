@@ -22,9 +22,39 @@ namespace EasyPointTracker
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        public int initialScorePanelOne = 50;
+        private int initialScorePanelTwo = 50;
+
         public MainPage()
         {
             this.InitializeComponent();
+     
+        }
+
+        private void Down_Click(object sender, RoutedEventArgs e)
+        {
+            initialScorePanelOne -= 1;
+            scorePanelOne.Text = initialScorePanelOne.ToString();
+        }
+
+        private void Up_Click(object sender, RoutedEventArgs e)
+        {
+            initialScorePanelOne += 1;
+            scorePanelOne.Text = initialScorePanelOne.ToString();
+        }
+
+        private void resetScorePanelOne(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            scorePanelOne.Text = "50";
+          //  scorePanelOne.Foreground = new SolidColorBrush(Windows.UI.Colors.YellowGreen);
+        }
+        
+        // somehow it's not pulling variable...must figure out. 
+
+        private void resetScorePanels(object sender, RoutedEventArgs e)
+        {
+            scorePanelOne.Text = initialScorePanelOne.ToString();
+            
         }
     }
 }

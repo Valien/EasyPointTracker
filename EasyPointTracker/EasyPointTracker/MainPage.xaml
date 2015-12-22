@@ -8,6 +8,34 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <SemanticZoom HorizontalAlignment="Left" Height="100" Margin="-554,505,0,-245" VerticalAlignment="Top">
+            <SemanticZoom.ZoomedInView>
+                <GridView ScrollViewer.IsHorizontalScrollChainingEnabled="False" ScrollViewer.IsVerticalScrollChainingEnabled="False"/>
+            </SemanticZoom.ZoomedInView>
+            <SemanticZoom.ZoomedOutView>
+                <GridView ScrollViewer.IsHorizontalScrollChainingEnabled="False" ScrollViewer.IsVerticalScrollChainingEnabled="False"/>
+            </SemanticZoom.ZoomedOutView>
+        </SemanticZoom>
+        <TextBlock x:Name="scorePanelOne" HorizontalAlignment="Left" Margin="136,117,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Height="100" Width="100" FontSize="80" FontWeight="Bold" SelectionHighlightColor="#FFCC6E29" DoubleTapped="resetScorePanelOne" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="False" />
+        <TextBlock x:Name="scorePanelTwo" HorizontalAlignment="Left" Margin="432.3,120.786,0,0" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" Height="100" Width="100" RenderTransformOrigin="0.5,0.5" FontSize="80" FontWeight="Bold" UseLayoutRounding="False" d:LayoutRounding="Auto">
+            <TextBlock.RenderTransform>
+                <CompositeTransform Rotation="180.741"/>
+            </TextBlock.RenderTransform>
+        </TextBlock>
+        <Button Content="Down" HorizontalAlignment="Left" Margin="154,234,0,0" VerticalAlignment="Top" Click="Down_Click"/>
+        <Button Content="Down" HorizontalAlignment="Left" Margin="467,95,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="179.184"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Up" HorizontalAlignment="Left" Margin="461,234,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+            <Button.RenderTransform>
+                <CompositeTransform Rotation="178.642"/>
+            </Button.RenderTransform>
+        </Button>
+        <Button Content="Up" HorizontalAlignment="Left" Margin="154,85,0,0" VerticalAlignment="Top" Click="Up_Click"/>
+        <Button x:Name="resetScores" Content="Reset" HorizontalAlignment="Left" Margin="298,181,0,0" VerticalAlignment="Top" Click="resetScorePanels"/>
+
 
     </Grid>
 </Page>

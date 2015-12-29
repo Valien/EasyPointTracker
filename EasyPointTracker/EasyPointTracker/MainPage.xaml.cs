@@ -22,39 +22,108 @@ namespace EasyPointTracker
     /// </summary>
     public sealed partial class MainPage : Page
     {
-        public int initialScorePanelOne = 50;
-        private int initialScorePanelTwo = 50;
 
+        private int defaultValues = 50;
+        private int initialScorePanelOne = 50;
+        private int initialScorePanelTwo = 50;
+        
         public MainPage()
         {
             this.InitializeComponent();
      
         }
 
-        private void Down_Click(object sender, RoutedEventArgs e)
+
+        // 1st player score panel
+        private void downClick1(object sender, RoutedEventArgs e)
         {
-            initialScorePanelOne -= 1;
-            scorePanelOne.Text = initialScorePanelOne.ToString();
+            int downScore = Convert.ToInt32(scorePanelOne.Text);
+
+            if (Convert.ToInt32(scorePanelOne.Text) <= defaultValues)
+            {
+                downScore -= 1;
+                scorePanelOne.Text = downScore.ToString();
+            } else
+            {
+                downScore -= 1;
+                scorePanelOne.Text = downScore.ToString();
+            }
+            //int anInteger;
+            //anInteger = Convert.ToInt32(textBox1.Text);
+            //anInteger = int.Parse(textBox1.Text);
+
         }
 
-        private void Up_Click(object sender, RoutedEventArgs e)
+        private void upClick1(object sender, RoutedEventArgs e)
         {
-            initialScorePanelOne += 1;
-            scorePanelOne.Text = initialScorePanelOne.ToString();
+            int upScore = Convert.ToInt32(scorePanelOne.Text); 
+
+            if (Convert.ToInt32(scorePanelOne.Text) >= defaultValues)
+            {
+                upScore += 1;
+                scorePanelOne.Text = upScore.ToString();
+            } else
+            {
+                upScore += 1;
+                scorePanelOne.Text = upScore.ToString();
+            }
         }
 
+        // 2nd player score panel
+        private void downClick2(object sender, RoutedEventArgs e)
+        {
+            int downScore2 = Convert.ToInt32(scorePanelTwo.Text);
+
+            if (Convert.ToInt32(scorePanelTwo.Text) <= defaultValues)
+            {
+                downScore2 -= 1;
+                scorePanelTwo.Text = downScore2.ToString();
+            }
+            else
+            {
+                downScore2 -= 1;
+                scorePanelTwo.Text = downScore2.ToString();
+            }
+        }
+
+        private void upClick2(object sender, RoutedEventArgs e)
+        {
+            int upScore2 = Convert.ToInt32(scorePanelTwo.Text);
+
+            if (Convert.ToInt32(scorePanelTwo.Text) >= defaultValues)
+            {
+                upScore2 += 1;
+                scorePanelTwo.Text = upScore2.ToString();
+
+            }
+            else
+            {
+                upScore2 += 1;
+                scorePanelTwo.Text = upScore2.ToString();
+            }
+        }
+
+        // reset score panels to defaults
         private void resetScorePanelOne(object sender, DoubleTappedRoutedEventArgs e)
         {
-            scorePanelOne.Text = "50";
-          //  scorePanelOne.Foreground = new SolidColorBrush(Windows.UI.Colors.YellowGreen);
+            scorePanelOne.Text = defaultValues.ToString();
+
         }
-        
+        private void resetScorePanelTwo(object sender, DoubleTappedRoutedEventArgs e)
+        {
+            scorePanelTwo.Text = defaultValues.ToString();
+        }
+
+
         // somehow it's not pulling variable...must figure out. 
 
-        private void resetScorePanels(object sender, RoutedEventArgs e)
-        {
-            scorePanelOne.Text = initialScorePanelOne.ToString();
+        //private void resetScorePanels(object sender, RoutedEventArgs e)
+        //{
+        //    scorePanelOne.Text = initialScorePanelOne.ToString();
             
-        }
+        //}
+
+
+
     }
 }

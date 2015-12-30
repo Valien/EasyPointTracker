@@ -24,8 +24,8 @@ namespace EasyPointTracker
     {
 
         private int defaultValues = 50;
-        private int initialScorePanelOne = 50;
-        private int initialScorePanelTwo = 50;
+        //private int initialScorePanelOne = 50;
+        //private int initialScorePanelTwo = 50;
         
         public MainPage()
         {

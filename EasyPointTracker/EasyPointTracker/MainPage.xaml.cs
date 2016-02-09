@@ -103,13 +103,19 @@ namespace EasyPointTracker
             scorePanelTwo.Text = defaultValues.ToString();
         }
 
+        private void AppBarButton_Click(object sender, RoutedEventArgs e)
+        {
+            Frame.Navigate(typeof(About));
+        }
+
+
 
         // somehow it's not pulling variable...must figure out. 
 
         //private void resetScorePanels(object sender, RoutedEventArgs e)
         //{
         //    scorePanelOne.Text = initialScorePanelOne.ToString();
-            
+
         //}
 
 

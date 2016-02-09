@@ -2,6 +2,8 @@
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
 using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media;
+using Windows.UI.Xaml.Media.Imaging;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
@@ -23,6 +25,12 @@ namespace EasyPointTracker
      
         }
         
+        public void ImgSwap()
+        {
+            Image img = new Image();
+            img.Source = new BitmapImage(new Uri("ms-appx:///Assets/minus-alt.png"));
+        }
+
         // 1st player score panel
         private void downClick1(object sender, RoutedEventArgs e)
         {
@@ -31,7 +39,7 @@ namespace EasyPointTracker
             if (Convert.ToInt32(scorePanelOne.Text) <= defaultValues)
             {
                 downScore -= 1;
-                scorePanelOne.Text = downScore.ToString();
+                scorePanelOne.Text = downScore.ToString();             
             } else
             {
                 downScore -= 1;
@@ -40,7 +48,7 @@ namespace EasyPointTracker
             //int anInteger;
             //anInteger = Convert.ToInt32(textBox1.Text);
             //anInteger = int.Parse(textBox1.Text);
-
+            ImgSwap();
         }
 
         private void upClick1(object sender, RoutedEventArgs e)

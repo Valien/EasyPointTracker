@@ -7,14 +7,14 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-    <Page.BottomAppBar>
+    <!--<Page.BottomAppBar>
         <CommandBar Opacity="0.6">
             <CommandBar.Content>
                 <Grid/>
             </CommandBar.Content>
             <AppBarButton Icon="Page" Label="appbarbutton" Click="AppBarButton_Click"/>
         </CommandBar>
-    </Page.BottomAppBar>
+    </Page.BottomAppBar>-->
 
 
     <Grid x:Name="EasyPointTracker">
@@ -55,28 +55,28 @@
                 <GridView ScrollViewer.IsHorizontalScrollChainingEnabled="False" ScrollViewer.IsVerticalScrollChainingEnabled="False"/>
             </SemanticZoom.ZoomedOutView>
         </SemanticZoom>
-        <TextBlock x:Name="scorePanelOne" HorizontalAlignment="Left" Margin="121,103,0,0" Text="50" VerticalAlignment="Top" FontSize="80" FontWeight="Bold" SelectionHighlightColor="#FFCC6E29" DoubleTapped="resetScorePanelOne" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="True" TextAlignment="Center" Foreground="Red" />
-        <TextBlock x:Name="scorePanelTwo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="80" FontWeight="Bold" DoubleTapped="resetScorePanelTwo" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="True" TextAlignment="Center" Margin="390,116,0,0" Foreground="Red">
+        <TextBlock x:Name="scorePanelOne" HorizontalAlignment="Left" Margin="121,103,0,0" Text="50" VerticalAlignment="Top" FontSize="80" FontWeight="Bold" SelectionHighlightColor="#FFCC6E29" DoubleTapped="resetScorePanelOne" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="True" TextAlignment="Center" Foreground="Green" />
+        <TextBlock x:Name="scorePanelTwo" HorizontalAlignment="Left" TextWrapping="Wrap" Text="50" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" FontSize="80" FontWeight="Bold" DoubleTapped="resetScorePanelTwo" IsHoldingEnabled="False" IsRightTapEnabled="False" IsTapEnabled="True" TextAlignment="Center" Margin="390,116,0,0" Foreground="Green">
             <TextBlock.RenderTransform>
                 <CompositeTransform Rotation="180"/>
             </TextBlock.RenderTransform>
         </TextBlock>
         <Button x:Name="upButton1" Content="+" HorizontalAlignment="Left" Margin="140,45,0,0" VerticalAlignment="Top" Click="upClick1" Foreground="White" FontWeight="Bold" Background="#33000000" FontSize="48"/>
-        <Button x:Name="downButton1" HorizontalAlignment="Left" Margin="124,209,0,75" VerticalAlignment="Center" Click="downClick1" Foreground="White" FontWeight="Bold" Background="#33000000" FontSize="48">
-            <Button.Template>
+        <Button x:Name="downButton1" Content="-" HorizontalAlignment="Left" Margin="147,209,0,75" VerticalAlignment="Center" Click="downClick1" Foreground="White" FontWeight="Bold" Background="#33000000" FontSize="48">
+            <!--<Button.Template>
                 <ControlTemplate TargetType="Button">
                     <Image x:Name="minus" Source="Assets/minus.png"></Image>
                 </ControlTemplate>
-            </Button.Template>
+            </Button.Template>-->
         </Button>
 
 
-        <Button x:Name="upButton2" Content="+" HorizontalAlignment="Left" Margin="409,200,0,84" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Click="upClick2" Foreground="White" FontWeight="Bold" FontSize="48" Background="{x:Null}">
+        <Button x:Name="upButton2" Content="+" HorizontalAlignment="Left" Margin="409,209,0,75" VerticalAlignment="Center" RenderTransformOrigin="0.5,0.5" Click="upClick2" Foreground="White" FontWeight="Bold" FontSize="48" Background="{x:Null}">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="180"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="downButton2" Content="-" HorizontalAlignment="Left" Margin="416,52,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="downClick2" Foreground="White" FontWeight="Bold" Background="#33000000" FontSize="48">
+        <Button x:Name="downButton2" Content="-" HorizontalAlignment="Left" Margin="416,45,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Click="downClick2" Foreground="White" FontWeight="Bold" Background="#33000000" FontSize="48">
             <Button.RenderTransform>
                 <CompositeTransform Rotation="180"/>
             </Button.RenderTransform>
